@@ -1,0 +1,139 @@
+body{
+background-color:#3498db;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 200px auto 0;
+    width: 1000px;
+    height: 600px;
+}
+
+.window-area{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius:20px;
+    margin: 0;
+    width:800px;
+    height: 100%;
+    padding: 0;
+}
+.window {
+    width: 10000px;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+.slider{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+.slide {
+    float: left;
+    width: 800px;
+    height: 600px;
+    position: relative;
+}
+
+.slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;	
+}
+
+.slide-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slide-btns {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#next-btn{
+    position: absolute;
+    cursor: pointer;
+    background: transparent;
+    font-size: 30px;
+    border: none;
+    padding: 10px;
+    color: white;
+    right: 0; 
+}
+#prev-btn {
+    position: absolute;
+    cursor: pointer;
+    background: transparent;
+    font-size: 30px;
+    border: none;
+    padding: 10px;
+    left: 0;
+    color: white;
+}
+
+#next-btn:focus,
+#prev-btn:focus {
+    outline: none;
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    font-size: 60px;
+    color: white;
+}
+
+.slider-dots {
+    text-align: center;
+    width: 300px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.slider-dots i {
+    opacity: 0.6;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.slider-dots i:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.slider-dots i:active {
+   
+}
+
+.active,
+.slider-dots_item:hover {
+    opacity:1 !important;
+}
+.fa-dot-circle:before {
+    content: '•';
+    opacity: .25;
+    font-size:40px;
+    color: black;
+}
